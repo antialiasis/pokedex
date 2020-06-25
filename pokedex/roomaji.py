@@ -98,7 +98,7 @@ class Romanizer(object):
 
                 if last_kana == 'sokuon':
                     if kana[0] in vowels:
-                        raise ValueError("Sokuon cannot precede a vowel.")
+                        characters.append("'")
 
                     characters.append(kana[0])
                 elif last_kana == 'n' and kana[0] in vowels:
