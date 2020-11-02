@@ -892,6 +892,11 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 891,kubfu,891,6,120,65,1594,1
 892,urshifu-single-strike,892,19,1050,65,1595,1
 893,zarude,893,18,700,65,1597,1
+894,regieleki,894,12,1450,65,1735,1
+895,regidrago,895,21,2000,65,1736,1
+896,glastrier,896,22,8000,65,1737,1
+897,spectrier,897,20,445,65,1738,1
+898,calyrex,898,11,77,65,1739,1
 10001,deoxys-attack,386,17,608,270,497,0
 10002,deoxys-defense,386,17,608,270,498,0
 10003,deoxys-speed,386,17,608,270,499,0
@@ -1085,3 +1090,9 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10191,eternatus-eternamax,890,1000,0,65,1593,0
 10192,urshifu-rapid-strike,892,19,1050,65,1596,0
 10193,zarude-dada,893,18,700,65,1598,0
+10194,articuno-galar,144,17,509,65,1094,0
+10195,zapdos-galar,145,16,582,65,1096,0
+10196,moltres-galar,146,20,660,65,1098,0
+10197,slowking-galar,199,18,795,65,1126,0
+10198,calyrex-ice-rider,898,24,8091,65,1740,0
+10199,calyrex-shadow-rider,898,24,536,65,1741,0

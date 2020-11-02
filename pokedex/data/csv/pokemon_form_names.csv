@@ -1615,6 +1615,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 891,9,,
 892,9,Single Strike Urshifu,Single Strike Urshifu
 893,9,,
+894,9,,
+895,9,,
+896,9,,
+897,9,,
+898,9,,
 10001,1,Ｂ,
 10001,3,B,
 10001,5,B,Zarbi B
@@ -3880,3 +3885,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10352,9,Eternamax Eternatus,Eternamax Eternatus
 10353,9,Rapid Strike Urshifu,Rapid Strike Urshifu
 10354,9,Dada Zarude,Dada Zarude
+10355,9,Galarian Articuno,Galarian Articuno
+10356,9,Galarian Zapdos,Galarian Zapdos
+10357,9,Galarian Moltres,Galarian Moltres
+10358,9,Galarian Slowking,Galarian Slowking
+10359,9,Ice Rider Calyrex,Ice Rider Calyrex
+10360,9,Shadow Rider Calyrex,Shadow Rider Calyrex

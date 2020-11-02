@@ -892,6 +892,11 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 891,kubfu,,891,20,1,0,0,1,1243
 892,urshifu-single-strike,single-strike,892,20,1,0,0,1,1244
 893,zarude,,893,20,1,0,0,1,1246
+894,regieleki,,894,20,1,0,0,1,1252
+895,regidrago,,895,20,1,0,0,1,1253
+896,glastrier,,896,20,1,0,0,1,1254
+897,spectrier,,897,20,1,0,0,1,1255
+898,calyrex,,898,20,1,0,0,1,1256
 10001,unown-b,b,201,3,0,0,0,2,284
 10002,unown-c,c,201,3,0,0,0,3,285
 10003,unown-d,d,201,3,0,0,0,4,286
@@ -1246,3 +1251,9 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10352,eternatus-eternamax,eternamax,10191,20,1,0,0,1,1242
 10353,urshifu-rapid-strike,rapid-strike,10192,20,1,0,0,1,1245
 10354,zarude-dada,dada,10193,20,1,0,0,1,1247
+10355,articuno-galar,galar,10194,20,1,0,0,1,1248
+10356,zapdos-galar,galar,10195,20,1,0,0,1,1249
+10357,moltres-galar,galar,10196,20,1,0,0,1,1250
+10358,slowking-galar,galar,10197,20,1,0,0,1,1251
+10359,calyrex-ice-rider,ice-rider,10198,20,1,0,0,1,1257
+10360,calyrex-shadow-rider,shadow-rider,10199,20,1,0,0,1,1258
