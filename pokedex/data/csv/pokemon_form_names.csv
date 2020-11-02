@@ -1570,13 +1570,13 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 846,9,,
 847,9,,
 848,9,,
-849,9,Amped Toxtricity,Amped Toxtricity
+849,9,Amped Form,Amped Toxtricity
 850,9,,
 851,9,,
 852,9,,
 853,9,,
-854,9,Phony Sinistea,Phony Sinistea
-855,9,Phony Polteageist,Phony Polteageist
+854,9,Phony Form,Phony Sinistea
+855,9,Phony Form,Phony Polteageist
 856,9,,
 857,9,,
 858,9,,
@@ -1590,15 +1590,15 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 866,9,,
 867,9,,
 868,9,,
-869,9,Vanilla Cream Alcremie,Vanilla Cream Alcremie
+869,9,Vanilla Cream,Vanilla Cream Alcremie
 870,9,,
 871,9,,
 872,9,,
 873,9,,
 874,9,,
-875,9,Ice Eiscue,Ice Eiscue
-876,9,Male Indeedee,Male Indeedee
-877,9,Full Belly Morpeko,Full Belly Morpeko
+875,9,Ice Face,Ice Eiscue
+876,9,Male,Male Indeedee
+877,9,Full Belly Mode,Full Belly Morpeko
 878,9,,
 879,9,,
 880,9,,
@@ -1609,11 +1609,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 885,9,,
 886,9,,
 887,9,,
-888,9,Hero Zacian,Hero Zacian
-889,9,Hero Zamazenta,Hero Zamazenta
+888,9,Hero of Many Battles,Hero Zacian
+889,9,Hero of Many Battles,Hero Zamazenta
 890,9,,
 891,9,,
-892,9,Single Strike Urshifu,Single Strike Urshifu
+892,9,Single Strike Style,Single Strike Urshifu
 893,9,,
 894,9,,
 895,9,,
@@ -3847,47 +3847,47 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10316,9,Ultra Necrozma,Ultra Necrozma
 10316,11,ウルトラネクロズマ,
 10316,12,究极奈克洛兹玛,
-10317,9,World Cup Pikachu,World Cup Pikachu
-10318,9,Galar Meowth,Galar Meowth
-10319,9,Galar Ponyta,Galar Ponyta
-10320,9,Galar Rapidash,Galar Rapidash
-10321,9,Galar Slowpoke,Galar Slowpoke
-10322,9,Galar Slowbro,Galar Slowbro
-10323,9,Galar Farfetch’d,Galar Farfetch’d
-10324,9,Galar Weezing,Galar Weezing
-10325,9,Galar Mr. Mime,Galar Mr. Mime
-10326,9,Galar Corsola,Galar Corsola
-10327,9,Galar Zigzagoon,Galar Zigzagoon
-10328,9,Galar Linoone,Galar Linoone
-10329,9,Galar Darumaka,Galar Darumaka
-10330,9,Galar Darmanitan,Galar Darmanitan
-10331,9,Galar Zen Darmanitan,Galar Zen Darmanitan
-10332,9,Galar Yamask,Galar Yamask
-10333,9,Galar Stunfisk,Galar Stunfisk
-10334,9,Gulping Cramorant,Gulping Cramorant
-10335,9,Gorging Cramorant,Gorging Cramorant
-10336,9,Low Key Toxtricity,Low Key Toxtricity
-10337,9,Antique Sinistea,Antique Sinistea
-10338,9,Antique Polteageist,Antique Polteageist
-10339,9,Ruby Cream Alcremie,Ruby Cream Alcremie
-10340,9,Matcha Cream Alcremie,Matcha Cream Alcremie
-10341,9,Mint Cream Alcremie,Mint Cream Alcremie
-10342,9,Lemon Cream Alcremie,Lemon Cream Alcremie
-10343,9,Salted Cream Alcremie,Salted Cream Alcremie
-10344,9,Ruby Swirl Alcremie,Ruby Swirl Alcremie
-10345,9,Caramel Swirl Alcremie,Caramel Swirl Alcremie
-10346,9,Rainbow Swirl Alcremie,Rainbow Swirl Alcremie
-10347,9,Noice Eiscue,Noice Eiscue
-10348,9,Female Indeedee,Female Indeedee
-10349,9,Hangry Morpeko,Hangry Morpeko
-10350,9,Crowned Zacian,Crowned Zacian
-10351,9,Crowned Zamazenta,Crowned Zamazenta
-10352,9,Eternamax Eternatus,Eternamax Eternatus
-10353,9,Rapid Strike Urshifu,Rapid Strike Urshifu
+10317,9,World Cup,World Cup Pikachu
+10318,9,Galar Form,Galarian Meowth
+10319,9,Galar Form,Galarian Ponyta
+10320,9,Galar Form,Galarian Rapidash
+10321,9,Galar Form,Galarian Slowpoke
+10322,9,Galar Form,Galarian Slowbro
+10323,9,Galar Form,Galarian Farfetch’d
+10324,9,Galar Form,Galarian Weezing
+10325,9,Galar Form,Galarian Mr. Mime
+10326,9,Galar Form,Galarian Corsola
+10327,9,Galar Form,Galarian Zigzagoon
+10328,9,Galar Form,Galarian Linoone
+10329,9,Galar Form,Galarian Darumaka
+10330,9,Galarian Standard Mode,Galarian Darmanitan
+10331,9,Galarian Zen Mode,Galarian Zen Darmanitan
+10332,9,Galar Form,Galarian Yamask
+10333,9,Galar Form,Galarian Stunfisk
+10334,9,Gulping Form,Gulping Cramorant
+10335,9,Gorging Form,Gorging Cramorant
+10336,9,Low Key Form,Low Key Toxtricity
+10337,9,Antique Form,Antique Sinistea
+10338,9,Antique Form,Antique Polteageist
+10339,9,Ruby Cream,Ruby Cream Alcremie
+10340,9,Matcha Cream,Matcha Cream Alcremie
+10341,9,Mint Cream,Mint Cream Alcremie
+10342,9,Lemon Cream,Lemon Cream Alcremie
+10343,9,Salted Cream,Salted Cream Alcremie
+10344,9,Ruby Swirl,Ruby Swirl Alcremie
+10345,9,Caramel Swirl,Caramel Swirl Alcremie
+10346,9,Rainbow Swirl,Rainbow Swirl Alcremie
+10347,9,Noice Face,Noice Eiscue
+10348,9,Female,Female Indeedee
+10349,9,Hangry Mode,Hangry Morpeko
+10350,9,Crowned Sword,Crowned Zacian
+10351,9,Crowned Shield,Crowned Zamazenta
+10352,9,Eternamax,Eternamax Eternatus
+10353,9,Rapid Strike Style,Rapid Strike Urshifu
 10354,9,Dada Zarude,Dada Zarude
-10355,9,Galarian Articuno,Galarian Articuno
-10356,9,Galarian Zapdos,Galarian Zapdos
-10357,9,Galarian Moltres,Galarian Moltres
-10358,9,Galarian Slowking,Galarian Slowking
-10359,9,Ice Rider Calyrex,Ice Rider Calyrex
-10360,9,Shadow Rider Calyrex,Shadow Rider Calyrex
+10355,9,Galar Form,Galarian Articuno
+10356,9,Galar Form,Galarian Zapdos
+10357,9,Galar Form,Galarian Moltres
+10358,9,Galar Form,Galarian Slowking
+10359,9,Ice Rider,Ice Rider Calyrex
+10360,9,Shadow Rider,Shadow Rider Calyrex
