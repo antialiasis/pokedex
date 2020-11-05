@@ -115,18 +115,20 @@ for pokemon in data:
         pokemon_ident = make_identifier(pokemon['name'])
         pokemon_form_ident = pokemon_ident
         species = pokemon
-        if pokemon['name'] not in evolution_map and pokemon['id'] > 893:
+        if pokemon['name'] not in evolution_map and False:
             print("INSERT INTO evolution_chains (id) SELECT MAX(id) + 1 FROM evolution_chains;")
-        print("INSERT INTO pokemon_species (id, identifier, generation_id, evolves_from_species_id, evolution_chain_id, color_id, shape_id, habitat_id, gender_rate, capture_rate, base_happiness, is_baby, hatch_counter, has_gender_differences, growth_rate_id, forms_switchable, is_legendary, is_mythical, \"order\") SELECT %s, '%s', %s, %s, %s, %s, 1, NULL, -1, 45, 70, false, %s, false, %s, false, %s, false, %s ON CONFLICT DO NOTHING;" % (
+        print("INSERT INTO pokemon_species (id, identifier, generation_id, evolves_from_species_id, evolution_chain_id, color_id, shape_id, habitat_id, gender_rate, capture_rate, base_happiness, is_baby, hatch_counter, has_gender_differences, growth_rate_id, forms_switchable, is_legendary, is_mythical, \"order\") SELECT %s, '%s', %s, %s, %s, %s, 1, NULL, -1, %s, 70, false, %s, false, %s, false, %s, %s, %s ON CONFLICT (id) DO UPDATE SET capture_rate = excluded.capture_rate;" % (
             pokemon['id'],
             pokemon_ident,
             7 if pokemon_ident in ('meltan', 'melmetal') else 8,
             evolution_map[pokemon['name']] if pokemon['name'] in evolution_map else 'NULL',
             ('(SELECT evolution_chain_id FROM pokemon_species WHERE id = \'%s\')' % evolution_map[pokemon['name']]) if pokemon['name'] in evolution_map else '(SELECT MAX(evolution_chain_id) + 1 FROM pokemon_species)',
             '(SELECT id FROM pokemon_colors WHERE identifier = \'%s\')' % pokemon['color'].lower(),
+            pokemon['catch_rate'],
             pokemon['hatch_cycles'],
             '(SELECT id FROM growth_rates WHERE identifier = \'%s\')' % GROWTH_RATES[pokemon['exp_group']],
-            "true" if pokemon_ident in ('regieleki', 'regidrago', 'glastrier', 'spectrier', 'calyrex') else "false",
+            "true" if pokemon_ident in ('zacian', 'zamazenta', 'eternatus', 'kubfu', 'urshifu', 'regieleki', 'regidrago', 'glastrier', 'spectrier', 'calyrex') else "false",
+            "true" if pokemon_ident in ('zarude',) else "false",
             pokemon['id']
         ))
 
