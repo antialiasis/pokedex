@@ -185,6 +185,14 @@ for pokemon in data:
             make_identifier(t)
         ))
 
+    for i, stat in enumerate(pokemon['base_stats']):
+        print("INSERT INTO pokemon_stats (pokemon_id, stat_id, base_stat, effort) VALUES (%s, %s, %s, %s) ON CONFLICT DO NOTHING;" % (
+            "(SELECT id FROM pokemon WHERE identifier = '%s')" % (pokemon_ident if species['id'] in PSEUDOFORMS else pokemon_form_ident),
+            i + 1,
+            stat,
+            pokemon['ev_yield'][i]
+        ))
+
     print("INSERT INTO pokemon_forms (id, identifier, form_identifier, pokemon_id, introduced_in_version_group_id, is_default, is_battle_only, is_mega, form_order, \"order\") VALUES (%s, '%s', %s, %s, %s, true, false, false, 1, (SELECT MAX(\"order\") + 1 FROM pokemon_forms)) ON CONFLICT DO NOTHING;" % (
         pokemon['id'] if pokemon['id'] < first_form_id else ("(COALESCE((SELECT id FROM pokemon_forms WHERE identifier = '%s'), (SELECT MAX(id) + 1 FROM pokemon_forms)))" % pokemon_form_ident),
         pokemon_form_ident,
