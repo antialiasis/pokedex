@@ -1227,11 +1227,11 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10328,linoone-galar,galar,10169,20,1,0,0,1,1135
 10329,darumaka-galar,galar,10170,20,1,0,0,1,1136
 10330,darmanitan-galar,galar,10171,20,1,0,0,1,1137
-10331,darmanitan-galar-zen,galar-zen,10172,20,1,0,0,1,1138
+10331,darmanitan-galar-zen,galar-zen,10172,20,1,1,0,1,1138
 10332,yamask-galar,galar,10173,20,1,0,0,1,1139
 10333,stunfisk-galar,galar,10174,20,1,0,0,1,1140
-10334,cramorant-gulping,gulping,10175,20,1,0,0,1,1179
-10335,cramorant-gorging,gorging,10176,20,1,0,0,1,1180
+10334,cramorant-gulping,gulping,10175,20,1,1,0,1,1179
+10335,cramorant-gorging,gorging,10176,20,1,1,0,1,1180
 10336,toxtricity-low-key,low-key,10177,20,1,0,0,1,1185
 10337,sinistea-antique,antique,854,20,0,0,0,1,1191
 10338,polteageist-antique,antique,855,20,0,0,0,1,1193
@@ -1243,9 +1243,9 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10344,alcremie-ruby-swirl,ruby-swirl,10183,20,1,0,0,1,1213
 10345,alcremie-caramel-swirl,caramel-swirl,10184,20,1,0,0,1,1214
 10346,alcremie-rainbow-swirl,rainbow-swirl,10185,20,1,0,0,1,1215
-10347,eiscue-noice,noice,10186,20,1,0,0,1,1222
+10347,eiscue-noice,noice,10186,20,1,1,0,1,1222
 10348,indeedee-female,female,10187,20,1,0,0,1,1224
-10349,morpeko-hangry,hangry,10188,20,1,0,0,1,1226
+10349,morpeko-hangry,hangry,10188,20,1,1,0,1,1226
 10350,zacian-crowned,crowned,10189,20,1,0,0,1,1238
 10351,zamazenta-crowned,crowned,10190,20,1,0,0,1,1240
 10352,eternatus-eternamax,eternamax,10191,20,1,0,0,1,1242
