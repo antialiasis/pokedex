@@ -145,6 +145,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 43,9,,
 44,9,,
 45,9,,
+48,9,,
+49,9,,
 50,1,,
 50,3,,
 50,4,,
@@ -187,6 +189,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 53,12,,
 54,9,,
 55,9,,
+56,9,,
+57,9,,
 58,9,,
 59,9,,
 60,9,,
@@ -290,8 +294,12 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 94,11,,
 94,12,,
 95,9,,
+96,9,,
+97,9,,
 98,9,,
 99,9,,
+100,9,,
+101,9,,
 102,9,,
 103,1,,
 103,3,,
@@ -381,6 +389,12 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 142,11,,
 142,12,,
 143,9,,
+144,9,,
+145,9,,
+146,9,,
+147,9,,
+148,9,,
+149,9,,
 150,1,,
 150,3,,
 150,4,,
@@ -392,6 +406,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 150,11,,
 150,12,,
 151,9,,
+155,9,,
+156,9,,
+157,9,,
 163,9,,
 164,9,,
 170,9,,
@@ -403,6 +420,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 176,9,,
 177,9,,
 178,9,,
+179,9,,
+180,9,,
 181,1,,
 181,3,,
 181,4,,
@@ -418,11 +437,18 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 184,9,,
 185,9,,
 186,9,,
+187,9,,
+188,9,,
+189,9,,
+191,9,,
+192,9,,
 194,9,,
 195,9,,
 196,9,,
 197,9,,
+198,9,,
 199,9,,
+200,9,,
 201,1,Ａ,
 201,3,A,
 201,5,A,Zarbi A
@@ -431,6 +457,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 201,8,A,
 201,9,A,Unown A
 202,9,,
+203,9,,
+204,9,,
+205,9,,
 206,9,,
 208,1,,
 208,3,,
@@ -465,6 +494,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 214,11,,
 214,12,,
 215,9,,
+216,9,,
+217,9,,
 220,9,,
 221,9,,
 222,9,,
@@ -473,6 +504,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 225,9,,
 226,9,,
 227,9,,
+228,9,,
 229,1,,
 229,3,,
 229,4,,
@@ -484,7 +516,10 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 229,11,,
 229,12,,
 230,9,,
+231,9,,
+232,9,,
 233,9,,
+234,9,,
 236,9,,
 237,9,,
 241,9,,
@@ -554,12 +589,21 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 282,9,,
 282,11,,
 282,12,,
+283,9,,
+284,9,,
+285,9,,
+286,9,,
+287,9,,
+288,9,,
+289,9,,
 290,9,,
 291,9,,
 292,9,,
 293,9,,
 294,9,,
 295,9,,
+296,9,,
+297,9,,
 298,9,,
 302,1,,
 302,3,,
@@ -591,6 +635,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 306,9,,
 306,11,,
 306,12,,
+307,9,,
 308,1,,
 308,3,,
 308,4,,
@@ -613,6 +658,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 310,11,,
 310,12,,
 315,9,,
+316,9,,
+317,9,,
 318,9,,
 319,1,,
 319,3,,
@@ -626,6 +673,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 319,12,,
 320,9,,
 321,9,,
+322,9,,
 323,1,,
 323,3,,
 323,4,,
@@ -637,9 +685,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 323,11,,
 323,12,,
 324,9,,
+325,9,,
+326,9,,
 328,9,,
 329,9,,
 330,9,,
+331,9,,
+332,9,,
+333,9,,
 334,1,,
 334,3,,
 334,4,,
@@ -650,6 +703,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 334,9,,
 334,11,,
 334,12,,
+335,9,,
+336,9,,
 337,9,,
 338,9,,
 339,9,,
@@ -670,6 +725,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 351,9,Normal,
 351,11,ポワルンのすがた,
 351,12,飘浮泡泡的样子,
+353,9,,
 354,1,,
 354,3,,
 354,4,,
@@ -682,6 +738,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 354,12,,
 355,9,,
 356,9,,
+357,9,,
 359,1,,
 359,3,,
 359,4,,
@@ -704,6 +761,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 362,9,,
 362,11,,
 362,12,,
+370,9,,
+371,9,,
+372,9,,
 373,1,,
 373,3,,
 373,4,,
@@ -785,6 +845,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 386,9,Normal Forme,Normal Deoxys
 386,11,ノーマルフォルム,
 386,12,普通形态,
+396,9,,
+397,9,,
+398,9,,
+401,9,,
+402,9,,
 403,9,,
 404,9,,
 405,9,,
@@ -809,6 +874,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 413,12,草木蓑衣,
 415,9,,
 416,9,,
+417,9,,
+418,9,,
+419,9,,
 420,9,,
 421,1,ネガフォルム,
 421,3,네거폼,
@@ -844,6 +912,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 428,9,,
 428,11,,
 428,12,,
+429,9,,
+430,9,,
 434,9,,
 435,9,,
 436,9,,
@@ -851,6 +921,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 438,9,,
 439,9,,
 440,9,,
+442,9,,
+443,9,,
+444,9,,
 445,1,,
 445,3,,
 445,4,,
@@ -879,6 +952,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 452,9,,
 453,9,,
 454,9,,
+456,9,,
+457,9,,
 458,9,,
 459,9,,
 460,1,,
@@ -923,6 +998,12 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 479,9,Rotom,
 479,11,ロトムのすがた,
 479,12,洛托姆的样子,
+480,9,,
+481,9,,
+482,9,,
+483,9,,
+484,9,,
+485,9,,
 487,1,アナザーフォルム,
 487,3,어나더폼,
 487,4,別種形態,
@@ -933,6 +1014,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 487,9,Altered Forme,Altered Giratina
 487,11,アナザーフォルム,
 487,12,别种形态,
+488,9,,
 492,1,ランドフォルム,
 492,3,랜드폼,
 492,4,陸上形態,
@@ -949,6 +1031,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 493,7,Tipo Normal,
 493,8,Tipo Normale,
 493,9,Normal Type,Normal Arceus
+501,9,,
+502,9,,
+503,9,,
 506,9,,
 507,9,,
 508,9,,
@@ -1059,6 +1144,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 591,9,,
 592,9,,
 593,9,,
+594,9,,
 595,9,,
 596,9,,
 597,9,,
@@ -1066,6 +1152,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 599,9,,
 600,9,,
 601,9,,
+602,9,,
+603,9,,
+604,9,,
 605,9,,
 606,9,,
 607,9,,
@@ -1076,6 +1165,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 612,9,,
 613,9,,
 614,9,,
+615,9,,
 616,9,,
 617,9,,
 618,9,,
@@ -1163,6 +1253,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 648,9,Aria Forme,Aria Meloetta
 648,11,ボイスフォルム,
 648,12,歌声形态,
+650,9,,
+651,9,,
+652,9,,
+653,9,,
+654,9,,
+655,9,,
+656,9,,
+657,9,,
 658,1,,
 658,3,,
 658,4,,
@@ -1178,6 +1276,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 661,9,,
 662,9,,
 663,9,,
+664,9,Icy Snow Pattern,Icy Snow Scatterbug
+665,9,Icy Snow Pattern,Icy Snow Spewpa
 666,1,はなぞののもよう,
 666,3,화원의 모양,
 666,5,Motif Floraison,Prismillon Floraison
@@ -1185,6 +1285,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 666,7,Motivo Floral,
 666,8,Motivo Giardinfiore,
 666,9,Meadow Pattern,Meadow Vivillon
+667,9,,
+668,9,,
 669,1,あかいはな,
 669,3,빨간 꽃,
 669,5,Fleur Rouge,Flabébé Rouge
@@ -1206,6 +1308,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 671,7,Flor Roja,
 671,8,Fiore Rosso,
 671,9,Red Flower,Red Florges
+672,9,,
+673,9,,
 674,9,,
 675,9,,
 676,1,やせいのすがた,
@@ -1255,6 +1359,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 700,9,,
 701,9,,
 702,9,,
+703,9,,
 704,9,,
 705,9,,
 706,9,,
@@ -1322,6 +1427,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 720,9,Hoopa Confined,Confined Hoopa
 720,11,いましめられしフーパ,
 720,12,惩戒胡帕,
+721,9,,
 722,9,,
 723,9,,
 724,9,,
@@ -1331,6 +1437,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 728,9,,
 729,9,,
 730,9,,
+734,9,,
 735,1,,
 735,3,,
 735,4,,
@@ -1353,6 +1460,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 738,9,,
 738,11,,
 738,12,,
+739,9,,
+740,9,,
 741,1,めらめらスタイル,
 741,3,이글이글스타일,
 741,4,熱辣熱辣風格,
@@ -1468,6 +1577,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 774,9,Meteor Form,Red Meteor Minior
 774,11,りゅうせいのすがた,
 774,12,流星的样子,
+775,9,,
 776,9,,
 777,1,,
 777,3,,
@@ -1489,6 +1599,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 778,9,Disguised Form,Disguised Mimikyu
 778,11,ばけたすがた,
 778,12,化形的样子,
+779,9,,
 780,9,,
 781,9,,
 782,9,,
@@ -1620,6 +1731,116 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 896,9,,
 897,9,,
 898,9,,
+899,9,,
+900,9,,
+901,9,,
+902,9,Male,Male Basculegion
+903,9,,
+904,9,,
+905,9,Incarnate Forme,Incarnate Enamorus
+906,9,,
+907,9,,
+908,9,,
+909,9,,
+910,9,,
+911,9,,
+912,9,,
+913,9,,
+914,9,,
+915,9,,
+916,9,Male,Male Oinkologne
+917,9,,
+918,9,,
+919,9,,
+920,9,,
+921,9,,
+922,9,,
+923,9,,
+924,9,,
+925,9,Family of Four,Family of Four Maushold
+926,9,,
+927,9,,
+928,9,,
+929,9,,
+930,9,,
+931,9,Green Plumage,Green Plumage Squawkabilly
+932,9,,
+933,9,,
+934,9,,
+935,9,,
+936,9,,
+937,9,,
+938,9,,
+939,9,,
+940,9,,
+941,9,,
+942,9,,
+943,9,,
+944,9,,
+945,9,,
+946,9,,
+947,9,,
+948,9,,
+949,9,,
+950,9,,
+951,9,,
+952,9,,
+953,9,,
+954,9,,
+955,9,,
+956,9,,
+957,9,,
+958,9,,
+959,9,,
+960,9,,
+961,9,,
+962,9,,
+963,9,,
+964,9,Zero Form,Zero Palafin
+965,9,,
+966,9,,
+967,9,,
+968,9,,
+969,9,,
+970,9,,
+971,9,,
+972,9,,
+973,9,,
+974,9,,
+975,9,,
+976,9,,
+977,9,,
+978,9,Curly Form,Curly Tatsugiri
+979,9,,
+980,9,,
+981,9,,
+982,9,Two-Segment Form,Two-Segment Dudunsparce
+983,9,,
+984,9,,
+985,9,,
+986,9,,
+987,9,,
+988,9,,
+989,9,,
+990,9,,
+991,9,,
+992,9,,
+993,9,,
+994,9,,
+995,9,,
+996,9,,
+997,9,,
+998,9,,
+999,9,Chest Form,Chest Form Gimmighoul
+1000,9,,
+1001,9,,
+1002,9,,
+1003,9,,
+1004,9,,
+1005,9,,
+1006,9,,
+1007,9,Limited Build,Limited Build Koraidon
+1008,9,Low-Power Mode,Low-Power Mode Miraidon
 10001,1,Ｂ,
 10001,3,B,
 10001,5,B,Zarbi B
@@ -3767,6 +3988,44 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10268,9,,
 10268,11,,
 10268,12,,
+10271,9,Polar Pattern,Polar Scatterbug
+10272,9,Tundra Pattern,Tundra Scatterbug
+10273,9,Continental Pattern,Continental Scatterbug
+10274,9,Garden Pattern,Garden Scatterbug
+10275,9,Elegant Pattern,Elegant Scatterbug
+10276,9,Meadow Pattern,Meadow Scatterbug
+10277,9,Modern Pattern,Modern Scatterbug
+10278,9,Marine Pattern,Marine Scatterbug
+10279,9,Archipelago Pattern,Archipelago Scatterbug
+10280,9,High Plains Pattern,High Plains Scatterbug
+10281,9,Sandstorm Pattern,Sandstorm Scatterbug
+10282,9,River Pattern,River Scatterbug
+10283,9,Monsoon Pattern,Monsoon Scatterbug
+10284,9,Savanna Pattern,Savanna Scatterbug
+10285,9,Sun Pattern,Sun Scatterbug
+10286,9,Ocean Pattern,Ocean Scatterbug
+10287,9,Jungle Pattern,Jungle Scatterbug
+10288,9,Fancy Pattern,Fancy Scatterbug
+10289,9,Poké Ball Pattern,Poké Ball Scatterbug
+10290,9,Polar Pattern,Polar Spewpa
+10291,9,Tundra Pattern,Tundra Spewpa
+10292,9,Continental Pattern,Continental Spewpa
+10293,9,Garden Pattern,Garden Spewpa
+10294,9,Elegant Pattern,Elegant Spewpa
+10295,9,Meadow Pattern,Meadow Spewpa
+10296,9,Modern Pattern,Modern Spewpa
+10297,9,Marine Pattern,Marine Spewpa
+10298,9,Archipelago Pattern,Archipelago Spewpa
+10299,9,High Plains Pattern,High Plains Spewpa
+10300,9,Sandstorm Pattern,Sandstorm Spewpa
+10301,9,River Pattern,River Spewpa
+10302,9,Monsoon Pattern,Monsoon Spewpa
+10303,9,Savanna Pattern,Savanna Spewpa
+10304,9,Sun Pattern,Sun Spewpa
+10305,9,Ocean Pattern,Ocean Spewpa
+10306,9,Jungle Pattern,Jungle Spewpa
+10307,9,Fancy Pattern,Fancy Spewpa
+10308,9,Poké Ball Pattern,Poké Ball Spewpa
 10309,1,,
 10309,3,,
 10309,4,,
@@ -3891,3 +4150,46 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10358,9,Galar Form,Galarian Slowking
 10359,9,Ice Rider,Ice Rider Calyrex
 10360,9,Shadow Rider,Shadow Rider Calyrex
+10361,9,Hisuian Form,Hisuian Growlithe
+10362,9,Hisuian Form,Hisuian Arcanine
+10363,9,Hisuian Form,Hisuian Voltorb
+10364,9,Hisuian Form,Hisuian Electrode
+10365,9,Paldean Form,Paldean Tauros
+10366,9,Paldean Blaze Breed,Paldean Blaze Breed Tauros
+10367,9,Paldean Aqua Breed,Paldean Aqua Breed Tauros
+10368,9,Hisuian Form,Hisuian Typhlosion
+10369,9,Paldean Form,Paldean Wooper
+10370,9,Hisuian Form,Hisuian Qwilfish
+10371,9,Hisuian Form,Hisuian Sneasel
+10372,9,Origin Forme,Origin Dialga
+10373,9,Origin Forme,Origin Palkia
+10374,9,Hisuian Form,Hisuian Samurott
+10375,9,Hisuian Form,Hisuian Lilligant
+10376,9,White-Striped Form,White Striped Basculin
+10377,9,Hisuian Form,Hisuian Zorua
+10378,9,Hisuian Form,Hisuian Zoroark
+10379,9,Hisuian Form,Hisuian Braviary
+10380,9,Hisuian Form,Hisuian Sliggoo
+10381,9,Hisuian Form,Hisuian Goodra
+10382,9,Hisuian Form,Hisuian Avalugg
+10383,9,Hisuian Form,Hisuian Decidueye
+10384,9,Female,Female Basculegion
+10385,9,Therian Forme,Therian Enamorus
+10386,9,Female,Female Oinkologne
+10387,9,Three-Segment Form,Three-Segment Dudunsparce
+10388,9,Hero Form,Hero Palafin
+10389,9,Family of Three,Family of Three Maushold
+10390,9,Droopy Form,Droopy Tatsugiri
+10391,9,Stretchy Form,Stretchy Tatsugiri
+10392,9,Blue Plumage,Blue Plumage Squawkabilly
+10393,9,White Plumage,White Plumage Squawkabilly
+10394,9,Yellow Plumage,Yellow Plumage Squawkabilly
+10395,9,Roaming Form,Roaming Gimmighoul
+10396,9,Sprinting Build,Sprinting Build Koraidon
+10397,9,Swimming Build,Swimming Build Koraidon
+10398,9,Gliding Build,Gliding Build Koraidon
+10399,9,Apex Build,Apex Build Koraidon
+10400,9,Drive Mode,Drive Mode Miraidon
+10401,9,Aquatic Mode,Aquatic Mode Miraidon
+10402,9,Glide Mode,Glide Mode Miraidon
+10403,9,Ultimate Mode,Ultimate Mode Miraidon
