@@ -38,6 +38,12 @@ ANON_DEFAULT_FORM = [
     720
 ]
 
+# Special form names that we can't construct with a simple rule of capitalizing the identifier.
+SPECIAL_FORM_NAMES = {
+    'maushold-family-of-four': "Family of Four",
+    'maushold-family-of-three': "Family of Three",
+}
+
 DEX_REGEX = re.compile(r'^(\d+) - \[(\d+)\]')
 
 def make_identifier(name):
@@ -158,14 +164,15 @@ for pokemon in data:
         ))
 
         print("INSERT INTO pokemon_dex_numbers (species_id, pokedex_id, pokedex_number) VALUES (%s, 1, %s) ON CONFLICT DO NOTHING;" % (pokemon['id'], pokemon['id']))
-        if pokemon['dex']:
-            print("INSERT INTO pokemon_dex_numbers (species_id, pokedex_id, pokedex_number) VALUES (%s, 30, %s) ON CONFLICT DO NOTHING;" % (pokemon['id'], pokemon['dex']))
 
     else:
         name, form_num = pokemon['name'].rsplit('-', 1)
         species = name_map[name]
         pokemon_ident = make_identifier(name)
         pokemon_form_ident = pokemon_ident
+
+    if pokemon['dex']:
+        print("INSERT INTO pokemon_dex_numbers (species_id, pokedex_id, pokedex_number) VALUES (%s, 30, %s) ON CONFLICT DO NOTHING;" % (species['id'], pokemon['dex']))
 
     if str(species['id']) in forms_data:
         form_ident = forms_data[str(species['id'])][int(form_num)]
@@ -225,8 +232,6 @@ for pokemon in data:
     ))
 
     form_name = ("E'%s %s'" % (' '.join(('Paldean' if word == 'paldea' else 'Hisuian' if word == 'hisui' else word.capitalize()) for word in form_ident.split('-')), species['name'])).encode('unicode-escape').replace('\\x', '\\u00') if form_ident else 'NULL'
-
-    if form_ident == 'maushold
 
     print("INSERT INTO pokemon_form_names (pokemon_form_id, local_language_id, form_name, pokemon_name) VALUES (%s, 9, %s, %s) ON CONFLICT DO NOTHING;" % (
         pokemon['id'] if pokemon['id'] < first_form_id else ("(SELECT id FROM pokemon_forms WHERE identifier = '%s')" % pokemon_form_ident),
