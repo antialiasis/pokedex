@@ -1007,6 +1007,15 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 1006,iron-valiant,1006,14,350,65,2383,1
 1007,koraidon-limited-build,1007,25,3030,65,2388,1
 1008,miraidon-low-power-mode,1008,35,2400,65,2393,1
+1009,walking-wake,1009,35,2800,65,3179,1
+1010,iron-leaves,1010,15,1250,65,3180,1
+1011,dipplin,1011,4,44,65,3181,1
+1012,poltchageist-counterfeit,1012,1,11,65,3182,1
+1013,sinistcha-unremarkable,1013,2,22,65,3184,1
+1014,okidogi,1014,18,920,65,3186,1
+1015,munkidori,1015,10,122,65,3187,1
+1016,fezandipiti,1016,14,301,65,3188,1
+1017,ogerpon-teal-mask,1017,12,398,65,3189,1
 10001,deoxys-attack,386,17,608,270,497,0
 10002,deoxys-defense,386,17,608,270,498,0
 10003,deoxys-speed,386,17,608,270,499,0
@@ -1249,3 +1258,9 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10240,miraidon-aquatic-mode,1008,28,2400,65,2395,0
 10241,miraidon-glide-mode,1008,28,2400,65,2396,0
 10242,miraidon-ultimate-mode,1008,28,2400,65,2397,0
+10243,ursaluna-bloodmoon,901,27,3330,65,3051,0
+10244,poltchageist-artisan,1012,1,11,65,3183,0
+10245,sinistcha-masterpiece,1013,2,22,65,3185,0
+10246,ogerpon-wellspring-mask,1017,12,398,65,3190,0
+10247,ogerpon-hearthflame-mask,1017,12,398,65,3191,0
+10248,ogerpon-cornerstone-mask,1017,12,398,65,3192,0

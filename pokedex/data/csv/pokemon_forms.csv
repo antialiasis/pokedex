@@ -1007,6 +1007,15 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 1006,iron-valiant,,1006,23,1,0,0,1,1386
 1007,koraidon-limited-build,limited-build,1007,23,1,0,0,1,1391
 1008,miraidon-low-power-mode,low-power-mode,1008,23,1,0,0,1,1396
+1009,walking-wake,,1009,23,1,0,0,1,1413
+1010,iron-leaves,,1010,23,1,0,0,1,1414
+1011,dipplin,,1011,23,1,0,0,1,1415
+1012,poltchageist-counterfeit,counterfeit,1012,23,1,0,0,1,1416
+1013,sinistcha-unremarkable,unremarkable,1013,23,1,0,0,1,1418
+1014,okidogi,,1014,23,1,0,0,1,1420
+1015,munkidori,,1015,23,1,0,0,1,1421
+1016,fezandipiti,,1016,23,1,0,0,1,1422
+1017,ogerpon-teal-mask,teal-mask,1017,23,1,0,0,1,1423
 10001,unown-b,b,201,3,0,0,0,2,284
 10002,unown-c,c,201,3,0,0,0,3,285
 10003,unown-d,d,201,3,0,0,0,4,286
@@ -1410,3 +1419,9 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10401,miraidon-aquatic-mode,aquatic-mode,10240,23,1,0,0,1,1398
 10402,miraidon-glide-mode,glide-mode,10241,23,1,0,0,1,1399
 10403,miraidon-ultimate-mode,ultimate-mode,10242,23,1,0,0,1,1400
+10404,ursaluna-bloodmoon,bloodmoon,10243,22,1,0,0,1,1412
+10405,poltchageist-artisan,artisan,10244,23,1,0,0,1,1417
+10406,sinistcha-masterpiece,masterpiece,10245,23,1,0,0,1,1419
+10407,ogerpon-wellspring-mask,wellspring-mask,10246,23,1,0,0,1,1424
+10408,ogerpon-hearthflame-mask,hearthflame-mask,10247,23,1,0,0,1,1425
+10409,ogerpon-cornerstone-mask,cornerstone-mask,10248,23,1,0,0,1,1426
