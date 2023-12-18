@@ -1016,6 +1016,14 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 1015,munkidori,,1015,23,1,0,0,1,1421
 1016,fezandipiti,,1016,23,1,0,0,1,1422
 1017,ogerpon-teal-mask,teal-mask,1017,23,1,0,0,1,1423
+1018,archaludon,,1018,23,1,0,0,1,1427
+1019,hydrapple,,1019,23,1,0,0,1,1428
+1020,gouging-fire,,1020,23,1,0,0,1,1429
+1021,raging-bolt,,1021,23,1,0,0,1,1430
+1022,iron-boulder,,1022,23,1,0,0,1,1431
+1023,iron-crown,,1023,23,1,0,0,1,1432
+1024,terapagos-normal,normal,1024,23,1,0,0,1,1433
+1025,pecharunt,,1025,23,1,0,0,1,1436
 10001,unown-b,b,201,3,0,0,0,2,284
 10002,unown-c,c,201,3,0,0,0,3,285
 10003,unown-d,d,201,3,0,0,0,4,286
@@ -1425,3 +1433,5 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10407,ogerpon-wellspring-mask,wellspring-mask,10246,23,1,0,0,1,1424
 10408,ogerpon-hearthflame-mask,hearthflame-mask,10247,23,1,0,0,1,1425
 10409,ogerpon-cornerstone-mask,cornerstone-mask,10248,23,1,0,0,1,1426
+10410,terapagos-terastal,terastal,10249,23,1,1,0,1,1434
+10411,terapagos-stellar,stellar,10250,23,1,1,0,1,1435

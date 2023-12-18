@@ -3,6 +3,8 @@ from __future__ import print_function, unicode_literals
 import json
 import re
 
+# Usage: pipe into psql with python add-sv-pokemon.py | psql -U tcod pokedex
+
 GROWTH_RATES = {
     'Slow': 'slow',
     'MediumFast': 'medium',
@@ -73,8 +75,11 @@ def make_identifier(name):
         raise ValueError(identifier)
     return identifier
 
-data = json.load(open('C:\\Users\\antialiasis\\Documents\\TCoD\\Flask\\tcod\\tcod\\data-files\\sv-pokemon-teal-mask.json'))
+data = json.load(open('C:\\Users\\antialiasis\\Documents\\TCoD\\Flask\\tcod\\tcod\\data-files\\sv-pokemon-indigo-disk.json'))
 forms_data = json.load(open(r'C:\\Users\\antialiasis\\Documents\\TCoD\\Flask\\tcod\\scripts\\data-files\\forms.json'))
+
+# Compensate for original veekun data including all the pseudoforms for Minior.
+forms_data['774'] = ["red-meteor", "orange-meteor", "yellow-meteor", "green-meteor", "blue-meteor", "indigo-meteor", "violet-meteor", "red-core", "orange-core", "yellow-core", "green-core", "blue-core", "indigo-core", "violet-core"]
 
 # This was used because the original S/V data rip didn't use the proper National Pokédex identifiers for the Paldean Pokémon.
 # natdex_map = {}
@@ -95,21 +100,27 @@ region_ident = make_identifier(region)
 
 kitakami = "Kitakami"
 kitakami_ident = make_identifier(kitakami)
+
+blueberry = "Blueberry Academy"
+blueberry_ident = make_identifier(blueberry)
 # first_form_id is the first internal ID that's a form, separating the default form identifiers from the form ones.
 # Usually you'll get National Pokédex identifiers for the defaults, then a gap, and then the form identifiers.
-first_form_id = 1019
+first_form_id = 1034
 
 print("BEGIN;")
 print("INSERT INTO regions (id, identifier) VALUES (9, '%s') ON CONFLICT DO NOTHING;" % hisui_ident)
 print("INSERT INTO region_names (region_id, local_language_id, name) SELECT id, 9, '%s' FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (hisui, hisui_ident))
 print("INSERT INTO regions (id, identifier) VALUES (10, '%s') ON CONFLICT DO NOTHING;" % region_ident)
-print("INSERT INTO region_names (region_id, local_language_id, name) SELECT id, 10, '%s' FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (region, region_ident))
+print("INSERT INTO region_names (region_id, local_language_id, name) SELECT id, 9, '%s' FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (region, region_ident))
 print("INSERT INTO regions (id, identifier) VALUES (11, '%s') ON CONFLICT DO NOTHING;" % kitakami_ident)
-print("INSERT INTO region_names (region_id, local_language_id, name) SELECT id, 11, '%s' FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (kitakami, kitakami_ident))
+print("INSERT INTO region_names (region_id, local_language_id, name) SELECT id, 9, '%s' FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (kitakami, kitakami_ident))
+print("INSERT INTO regions (id, identifier) VALUES (12, '%s') ON CONFLICT DO NOTHING;" % blueberry_ident)
+print("INSERT INTO region_names (region_id, local_language_id, name) SELECT id, 9, '%s' FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (blueberry, blueberry_ident))
 
 print("INSERT INTO pokedexes (id, region_id, identifier, is_main_series) SELECT 29, id, '%s', true FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (hisui_ident, hisui_ident))
 print("INSERT INTO pokedexes (id, region_id, identifier, is_main_series) SELECT 30, id, '%s', true FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (region_ident, region_ident))
 print("INSERT INTO pokedexes (id, region_id, identifier, is_main_series) SELECT 31, id, '%s', true FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (kitakami_ident, kitakami_ident))
+print("INSERT INTO pokedexes (id, region_id, identifier, is_main_series) SELECT 32, id, '%s', true FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % ("blueberry", blueberry_ident))
 
 print("INSERT INTO generations (id, main_region_id, identifier) SELECT 9, id, '%s' FROM regions WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % ('generation-ix', region_ident))
 print("INSERT INTO version_groups (id, identifier, generation_id, \"order\") VALUES (21, 'brilliant-diamond-shining-pearl', 8, 21) ON CONFLICT DO NOTHING;")
@@ -138,7 +149,7 @@ for pokemon in data:
                 evolution_map[evolution['species']] = species_id
 
 # pokemon_order is whichever is the highest order value in the pokemon table currently. Right now we're just lazily incrementing it for each new Pokémon/form.
-pokemon_order = 2397
+pokemon_order = 3192
 
 for pokemon in data:
     pokemon_ident = None
@@ -187,6 +198,9 @@ for pokemon in data:
         print("INSERT INTO pokemon_dex_numbers (species_id, pokedex_id, pokedex_number) VALUES (%s, 31, %s) ON CONFLICT DO NOTHING;" % (
             species['id'], pokemon['kitakami_dex']))
 
+    if pokemon['blueberry_dex']:
+        print("INSERT INTO pokemon_dex_numbers (species_id, pokedex_id, pokedex_number) VALUES (%s, 32, %s) ON CONFLICT DO NOTHING;" % (species['id'], pokemon['blueberry_dex']))
+
     if str(species['id']) in forms_data:
         form_ident = forms_data[str(species['id'])][int(form_num)]
         if form_ident:
@@ -224,7 +238,8 @@ for pokemon in data:
     ))
 
     for i, t in enumerate(pokemon['types']):
-        print("SELECT id, '%s', '%s' FROM pokemon WHERE identifier = '%s';" % (pokemon_ident, pokemon_form_ident, pokemon_ident if species['id'] in PSEUDOFORMS else pokemon_form_ident))
+        print("SELECT '%s';" % pokemon_table_ident)
+        print("SELECT id, '%s', '%s' FROM pokemon WHERE identifier = '%s';" % (pokemon_ident, pokemon_form_ident, pokemon_table_ident))
         print("INSERT INTO pokemon_types (pokemon_id, type_id, slot) SELECT %s, id, %s FROM types WHERE identifier = '%s' ON CONFLICT DO NOTHING;" % (
             "(SELECT id FROM pokemon WHERE identifier = '%s')" % pokemon_table_ident,
             i + 1,
