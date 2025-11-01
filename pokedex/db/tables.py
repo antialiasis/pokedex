@@ -1809,7 +1809,7 @@ class PokemonEvolution(TableBase):
         doc=u"The ID of the location the evolution must be triggered at.")
     held_item_id = Column(Integer, ForeignKey('items.id'), nullable=True,
         doc=u"The ID of the item the Pokémon must hold.")
-    time_of_day = Column(Enum('day', 'night', name='pokemon_evolution_time_of_day'), nullable=True,
+    time_of_day = Column(Enum('day', 'night', 'dusk', name='pokemon_evolution_time_of_day'), nullable=True,
         doc=u"The required time of day.")
     known_move_id = Column(Integer, ForeignKey('moves.id'), nullable=True,
         doc=u"The ID of the move the Pokémon must know.")
@@ -2035,7 +2035,7 @@ class PokemonSpecies(TableBase):
         doc=u"ID of the species' evolution chain (a.k.a. family)")
     color_id = Column(Integer, ForeignKey('pokemon_colors.id'), nullable=False,
         doc=u"ID of this Pokémon's Pokédex color, as used for a gimmick search function in the games.")
-    shape_id = Column(Integer, ForeignKey('pokemon_shapes.id'), nullable=False,
+    shape_id = Column(Integer, ForeignKey('pokemon_shapes.id'), nullable=True,
         doc=u"ID of this Pokémon's body shape, as used for a gimmick search function in the games.")
     habitat_id = Column(Integer, ForeignKey('pokemon_habitats.id'), nullable=True,
         doc=u"ID of this Pokémon's habitat, as used for a gimmick search function in the games.")
@@ -2826,7 +2826,7 @@ PokemonSpecies.flavor_text = relationship(PokemonSpeciesFlavorText,
     backref='species')
 PokemonSpecies.growth_rate = relationship(GrowthRate,
     innerjoin=True,
-    backref='evolution_chains')
+    backref='species')
 PokemonSpecies.habitat = relationship(PokemonHabitat,
     backref='species')
 PokemonSpecies.color = relationship(PokemonColor,
@@ -2864,7 +2864,7 @@ PokemonSpecies.generation = relationship(Generation,
     innerjoin=True,
     backref='species')
 PokemonSpecies.shape = relationship(PokemonShape,
-    innerjoin=True,
+    innerjoin=False,
     backref='species')
 PokemonSpecies.pal_park = relationship(PalPark,
     uselist=False,

@@ -11,10 +11,14 @@ import sqlalchemy.sql.util
 import sqlalchemy.types
 
 import pokedex
+import pokedex.db.tables as t
 from pokedex.db import metadata, translations
 from pokedex.defaults import get_default_csv_dir
 from pokedex.db.dependencies import find_dependent_tables
 from pokedex.db.oracle import rewrite_long_table_names
+
+from sqlalchemy import and_
+from sqlalchemy.sql import exists
 
 
 def _get_table_names(metadata, patterns):
@@ -370,6 +374,23 @@ def load(session, tables=[], directory=None, drop_tables=False, verbose=False, s
         session.commit()
         print_done()
 
+    VGPMM = t.VersionGroupPokemonMoveMethod
+    if VGPMM.__tablename__ in table_names or t.PokemonMove.__tablename__ in table_names:
+        print_start('Regenerating %s' % VGPMM.__tablename__)
+
+        session.query(VGPMM).delete()
+
+        q = session.query(t.VersionGroup.id, t.PokemonMoveMethod.id)
+        q = q.filter(exists().where(and_(
+                t.PokemonMove.pokemon_move_method_id == t.PokemonMoveMethod.id,
+                t.PokemonMove.version_group_id == t.VersionGroup.id)))
+        for version_group_id, pokemon_move_method_id in q:
+            session.add(VGPMM(
+                    version_group_id=version_group_id,
+                    pokemon_move_method_id=pokemon_move_method_id,
+            ))
+        session.commit()
+        print_done()
 
     print_start('Translations')
     transl = translations.Translations(csv_directory=directory)
@@ -441,10 +462,12 @@ def dump(session, tables=[], directory=None, verbose=False, langs=None):
 
         # CSV module only works with bytes on 2 and only works with text on 3!
         if six.PY3:
-            writer = csv.writer(open(filename, 'w', newline='', encoding="utf8"), lineterminator='\n')
+            csvfile = open(filename, 'w', newline='', encoding="utf8")
+            writer = csv.writer(csvfile, lineterminator='\n')
             columns = [col.name for col in table.columns]
         else:
-            writer = csv.writer(open(filename, 'wb'), lineterminator='\n')
+            csvfile = open(filename, 'wb')
+            writer = csv.writer(csvfile, lineterminator='\n')
             columns = [col.name.encode('utf8') for col in table.columns]
 
         # For name tables, always dump rows for official languages, as well as
@@ -491,4 +514,5 @@ def dump(session, tables=[], directory=None, verbose=False, langs=None):
 
                 writer.writerow(csvs)
 
+        csvfile.close()
         print_done()
