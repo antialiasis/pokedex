@@ -1,4 +1,4 @@
-from sqlalchemy.ext.associationproxy import association_proxy, AssociationProxy
+from sqlalchemy.ext.associationproxy import association_proxy, AssociationProxy, ColumnAssociationProxyInstance
 from sqlalchemy.orm import Query, mapper, relationship, synonym
 from sqlalchemy.orm.collections import attribute_mapped_collection
 from sqlalchemy.orm.scoping import ScopedSession
@@ -22,6 +22,43 @@ else:
         from sqlalchemy import event
         _MULTILANG_SESSION_USE_EVENT = True
 
+class LocalAssociationProxyInstance(ColumnAssociationProxyInstance):
+    """Instance returned when accessing the proxy on a class."""
+    def __clause_element__(self):
+        q = select([self.remote_attr])
+        q = q.where(self.target_class.foreign_id == self.owning_class.id)
+        q = q.where(self.target_class.local_language_id == bindparam('_default_language_id'))
+        return q
+
+    @classmethod
+    def _construct_for_assoc(
+        cls,
+        target_assoc,
+        parent,
+        owning_class,
+        target_class,
+        value_attr
+    ):
+        if target_assoc is not None:
+            return ObjectAssociationProxyInstance(
+                parent, owning_class, target_class, value_attr
+            )
+
+        attr = getattr(target_class, value_attr)
+        if not hasattr(attr, "_is_internal_proxy"):
+            return AmbiguousAssociationProxyInstance(
+                parent, owning_class, target_class, value_attr
+            )
+        is_object = attr._impl_uses_objects
+        if is_object:
+            return ObjectAssociationProxyInstance(
+                parent, owning_class, target_class, value_attr
+            )
+        else:
+            return LocalAssociationProxyInstance(
+                parent, owning_class, target_class, value_attr
+            )
+
 class LocalAssociationProxy(AssociationProxy, ColumnOperators):
     """An association proxy for names in the default language
 
@@ -33,6 +70,31 @@ class LocalAssociationProxy(AssociationProxy, ColumnOperators):
         q = q.where(self.target_class.foreign_id == self.owning_class.id)
         q = q.where(self.target_class.local_language_id == bindparam('_default_language_id'))
         return q
+
+    def _as_instance(self, class_, obj):
+        try:
+            inst = class_.__dict__[self.key + "_inst"]
+        except KeyError:
+            inst = None
+
+        # avoid exception context
+        if inst is None:
+            owner = self._calc_owner(class_)
+            if owner is not None:
+                inst = LocalAssociationProxyInstance.for_proxy(self, owner, obj)
+                setattr(class_, self.key + "_inst", inst)
+            else:
+                inst = None
+
+        if inst is not None and not inst._is_canonical:
+            # the AssociationProxyInstance can't be generalized
+            # since the proxied attribute is not on the targeted
+            # class, only on subclasses of it, which might be
+            # different.  only return for the specific
+            # object's current value
+            return inst._non_canonical_get_for_object(obj)  # type: ignore
+        else:
+            return inst  # type: ignore  # TODO
 
     def operate(self, op, *other, **kwargs):
         q = select([self.remote_attr])
