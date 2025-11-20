@@ -28,7 +28,7 @@ class LocalAssociationProxyInstance(ColumnAssociationProxyInstance):
         q = select([self.remote_attr])
         q = q.where(self.target_class.foreign_id == self.owning_class.id)
         q = q.where(self.target_class.local_language_id == bindparam('_default_language_id'))
-        return q
+        return q.scalar_subquery()
 
     @classmethod
     def _construct_for_assoc(
