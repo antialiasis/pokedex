@@ -9,7 +9,7 @@ def get_default_db_uri_with_origin():
     if uri is None:
         from importlib.resources import files
         sqlite_path = files('pokedex').joinpath('data/pokedex.sqlite')
-        uri = 'sqlite:///' + sqlite_path
+        uri = 'sqlite:///' + str(sqlite_path)
         origin = 'default'
 
     return uri, origin
