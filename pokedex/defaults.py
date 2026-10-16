@@ -7,9 +7,8 @@ def get_default_db_uri_with_origin():
     origin = 'environment'
 
     if uri is None:
-        import pkg_resources
-        sqlite_path = pkg_resources.resource_filename('pokedex',
-                                                      'data/pokedex.sqlite')
+        from importlib.resources import files
+        sqlite_path = files('pokedex').joinpath('data/pokedex.sqlite')
         uri = 'sqlite:///' + sqlite_path
         origin = 'default'
 
@@ -20,16 +19,15 @@ def get_default_index_dir_with_origin():
     origin = 'environment'
 
     if index_dir is None:
-        import pkg_resources
-        index_dir = pkg_resources.resource_filename('pokedex',
-                                                    'data/whoosh-index')
+        from importlib.resources import files
+        index_dir = files('pokedex').joinpath('data/whoosh-index')
         origin = 'default'
 
     return index_dir, origin
 
 def get_default_csv_dir_with_origin():
-    import pkg_resources
-    csv_dir = pkg_resources.resource_filename('pokedex', 'data/csv')
+    from importlib.resources import files
+    csv_dir = files('pokedex').joinpath('data/csv')
     origin = 'default'
 
     return csv_dir, origin
