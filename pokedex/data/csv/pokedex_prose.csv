@@ -54,6 +54,12 @@ pokedex_id,local_language_id,name,description
 24,9,Updated Ula'ula,Ultra Sun/Ultra Moon Ula'ula dex
 25,9,Updated Poni,Ultra Sun/Ultra Moon Poni dex
 26,9,Let’s Go Kanto,Let’s Go: Pikachu/Let’s Go: Eevee Kanto dex
-27,9,Galar,
-28,9,Isle of Armor,
-29,9,Crown Tundra,
+27,9,Galar,Galar Pokédex
+28,9,Isle of Armor,Isle of Armor Pokédex
+29,9,Crown Tundra,Crown Tundra Pokédex
+30,9,Hisui,Hisui Pokédex
+31,9,Paldea,Paldea Pokédex
+32,9,Kitakami,Kitakami Pokédex
+33,9,Blueberry,Blueberry Pokédex
+34,9,Lumiose,Lumiose Pokédex
+35,9,Hyperspace,Hyperspace Pokédex
